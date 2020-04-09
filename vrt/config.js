@@ -16,7 +16,7 @@ const config = {
         behavior: async page => {
           const buttonSelector = `[data-baseweb="button"]`;
           const menuSelector = `[data-baseweb="menu"]`;
-          await page.waitForSelector(buttonSelector);
+          await page.waitForSelector(buttonSelector, {visible: true});
           await page.click(buttonSelector);
           await page.waitForSelector(menuSelector, {
             visible: true,
