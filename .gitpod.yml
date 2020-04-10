@@ -1,0 +1,12 @@
+tasks:
+  - name: Storyboook
+    init: yarn install && gp sync-done install
+    command: yarn storybook
+  - name: Documentation
+    init: yarn documentation:dev
+
+ports:
+  - port: 6006
+    onOpen: ignore
+  - port: 3000
+    onOpen: open-preview
